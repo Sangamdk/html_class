@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>19 Sept Data Type var,let,int,array,string</title>
+</head>
+<body>
+
+	First Number<p  id="firstno">First</p>
+	Second Number<p id="secondno">second</p>
+
+	Results is<p id="result">results of Multy</p>
+	Sum is<p id="result2">results of sum</p>
+
+<button onclick="multy()">Submit</button>
+
+	<script type="text/javascript">
+
+		function multy() {
+			let a,b,c,d; 
+		a=5;
+		b=6;
+		c=a*b;
+		d=c+b;	
+		document.getElementById("firstno").innerHTML=a;
+		document.getElementById("secondno").innerHTML=b;
+		document.getElementById("result").innerHTML=c;
+		document.getElementById("result2").innerHTML=d;
+
+		}
+
+		function persons()
+		{
+			let name,lastname,age;
+			name="deepak";
+			lastname="kumar";
+			age=18;
+
+			document.getElementById("Firstname").innerHTML=name;
+			document.getElementById("secondname").innerHTML=lastname;			
+			document.getElementById("age").innerHTML=age;
+			
+
+
+		}
+
+	</script>
+
+	<p id="Firstname">fname</p>
+	<p id="secondname">sname</p>
+	<p id="age">age</p>
+	<button id="show" onclick="persons()">Show Details</button>
+
+
+</body>
+</html>
