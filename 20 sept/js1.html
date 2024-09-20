@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sum Of two Number useing Input</title>
+</head>
+<body>
+
+		<label>First Number:</label>
+		<input type="text" name="fnumber" id="fnumber" placeholder="First Number">
+		<br>
+		<label>Second Number Number:</label>
+		<input type="text" name="snumber" id="snumber" placeholder="Second Number">
+		<br>
+		
+		<br>
+		<button onclick="sumprg()">+</button>
+		<button onclick="subprg()">-</button>
+		<button onclick="multiprg()">X</button>
+		<p id="result"></p>
+
+
+	
+
+	<script type="text/javascript">
+
+		var z;
+		function sumprg() {
+	var a =  document.getElementById("fnumber").value;
+    var b =  document.getElementById("snumber").value;
+    var c = parseInt(a) + parseInt(b); 
+
+   
+
+    document.getElementById("result").innerHTML=c;
+   
+		}
+
+		function subprg() {
+					var a =  document.getElementById("fnumber").value;
+   					 var b =  document.getElementById("snumber").value;
+   					 var c = parseInt(a) - parseInt(b); 
+   					 document.getElementById("result").innerHTML=c;
+		}
+
+		function multiprg(){
+					var a =  document.getElementById("fnumber").value;
+   					 var b =  document.getElementById("snumber").value;
+   					 var c = parseInt(a) * parseInt(b); 
+   					 document.getElementById("result").innerHTML=c;
+
+
+		}
+	</script>
+
+</body>
+</html>

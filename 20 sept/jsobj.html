@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Js Object</title>
+</head>
+<body>
+
+	<p id="data">data</p>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		const person = {
+  			firstName: "John",
+  			lastName: "Doe",
+  			age: 50,
+  			eyeColor: "blue"
+			};
+
+		const job = {
+  			salry: 35000
+			};
+
+		const bike={
+			bname: "sf shine"
+		}
+
+	document.getElementById("data").innerHTML = person.firstName + " is " + person.age + " years old." + " eye Color is " + person.eyeColor + "salry Is " + job.salry + "My Bike " + bike.bname;
+
+		let text1 = "ABHG8974531";
+		// document.getElementById("demo").innerHTML = text.length;
+			// document.getElementById("demo").innerHTML = text.charAt(6);
+
+
+			const name = "Aceit Solution";
+			let letter = name.at(2);
+			// document.getElementById("demo").innerHTML = letter;
+
+			let text = "Please locate where 'locate' occurs!";
+			let index = text.indexOf("where");
+			document.getElementById("demo").innerHTML = "Location " +index; 
+
+
+	</script>
+
+</body>
+</html>
