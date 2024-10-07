@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page 2</title>
+</head>
+<body>
+
+	<label id="lname">Fulname</label> 
+	<label id="lname1">Last name</label>
+
+			<script> 
+           const vnum = sessionStorage.getItem('lname'); 
+           const lnm = sessionStorage.getItem('lname1'); 
+
+      		document.getElementById('lname').textContent = vnum;
+      		document.getElementById('lname1').textContent = lnm;
+         </script>
+
+
+</body>
+</html>
