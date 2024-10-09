@@ -1,0 +1,34 @@
+<!doctype html>
+	<head>
+		<title>JavaScript onchange Event</title>
+	</head>
+	<body>
+	    <select id="dropdown">
+	        <option value="1">1</option>
+	        <option value="2">2</option>
+	        <option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="A">A</option>
+	    </select>
+
+		<script>
+			/* JS comes here */
+            function eventHandler() 
+			{
+                // do something
+                alert("Value selected");
+            } 
+            // setup event handler on HTML element
+            document.getElementById("dropdown").onchange = eventHandler;
+			
+			function eventHandler1() 
+			{
+                // do something
+                alert("Value not selected");
+            } 
+            // setup event handler on HTML element
+            document.getElementById("dropdown").onchange = eventHandler1;
+		</script>
+	</body>
+</html>

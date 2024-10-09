@@ -1,0 +1,21 @@
+<html>
+<body>
+   <h3>Using the <i> document.createElement() method </i> to Create image element dynamically using JavaScript </h3>
+   <div id = "img"> </div>
+   <button id = "addImage" onclick = "createImage()"> Create Image </button>
+   <script>
+      function createImage()
+	   {
+         let img = document.getElementById('img');
+         let newImage = document.createElement('img');
+         newImage.src = "22.jpg";
+         // Set attribute values for the image
+         newImage.setAttribute('id', 'myImage');
+         newImage.setAttribute('width', '200px');
+         newImage.setAttribute('height', '200px');
+         img.appendChild(newImage);
+      }
+   
+   </script>
+</body>
+</html>
