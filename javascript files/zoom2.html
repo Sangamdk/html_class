@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style for the zoomed image */
+        .zoomed {
+            transform: scale(2);  // Double the size
+            transition: transform 0.2s;  // Smooth transition effect
+        }
+    </style>
+</head>
+<body>
+    <img src="ww.jpg"  id="zoom-image" onClick="zoomImage()">
+    <script>
+        function zoomImage()
+		 {
+            let imgElement = document.getElementById('zoom-image');
+            if (imgElement.classList.contains('zoomed'))
+			 {
+                imgElement.classList.remove('zoomed');  // Zoom out
+            }
+			 else 
+			 {
+                imgElement.classList.add('zoomed');  // Zoom in
+            }
+        }
+    </script>
+</body>
+</html>

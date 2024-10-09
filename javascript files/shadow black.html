@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <style>
+         #box {
+            background-color:lime;
+            width: 500px;
+			height:300px;
+            color: blue;
+            padding: 10px;
+            font-family: sans-serif;
+			font-size:36px;
+         }
+      </style>
+   </head>
+   <body>
+      <h2> Adding one or more drop shadow to the box using JavaScript </h2>
+      <p> Click on the buttons to add drop shadow and shadow blur </p>
+      <p></p>
+      
+	  <div id="box">Box</div>
+      <br><br>
+      
+	  <button type="button" onClick="display()">Add Drop Shadow</button>
+      <button type="button" onClick="addShadowBlur()">Add Drop Shadow Blur</button>
+     
+	  <script>
+         const box = document.getElementById("box");
+         function display()
+		  {
+            box.style.boxShadow = "20px 15px green";
+         }
+         	 
+		 
+		  function addShadowBlur()
+		   {
+            box.style.boxShadow = "12px 18px 20px yellow, 14px 16px 18px blue";
+         }
+		 
+		
+		
+      </script>
+   </body>
+</html>

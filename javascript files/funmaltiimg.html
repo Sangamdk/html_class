@@ -1,0 +1,33 @@
+<html>
+<body>
+   <h3>Using the <i> Image() constructor </i> to Create image element dynamically using JavaScript</h3>
+   <div id = "img"> </div>
+   <br> <br>
+   <button id = "addImage" onclick = "AddMultiple()"> Add Multiple Images </button>
+   <script>
+      function AddMultiple() {
+         let img = document.getElementById('img');
+         let imageURLS = [
+            "Ceric9.gif",
+            "ww.jpg",
+            "https://picsum.photos/200/300.webp",
+            "https://picsum.photos/200",
+			"yy.jpg",
+            "https://picsum.photos/200/300"
+         ]
+         // Fetch random images and append to the DOM
+         for (let i = 0; i < 6; i++) {
+            let randomImage = new Image();
+            randomImage.src = imageURLS[i];
+            randomImage.alt = "Random Image";
+            randomImage.width = 100;
+            randomImage.height = 100;
+            // Add right and left margin to the image
+            randomImage.style.marginRight = "30px";
+            randomImage.style.marginLeft = "30px";
+            img.appendChild(randomImage);
+         }
+      }
+   </script>
+</body>
+</html>
