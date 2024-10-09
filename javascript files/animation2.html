@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    progress {
+      width: 20%;
+    }
+  </style>
+  <script src="animate.js"></script>
+</head>
+<body>
+<h1>ANIMATION 2</h1>
+  <progress id="elem"></progress>
+
+  <script>
+    elem.onclick = function() 
+	{
+      animate(
+	  {
+        duration: 20,
+        timing: function(timeFraction)
+		{
+          return timeFraction;
+        },
+        draw: function(progress) 
+		{
+          elem.style.width = progress * 20 + '%';
+        }
+      });
+    };
+  </script>
+
+
+</body>
+
+</html>

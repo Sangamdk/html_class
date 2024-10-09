@@ -1,0 +1,33 @@
+<html>
+<body>
+   <h3>Allowing users to set custom <i> height and width property </i> of images to add zoom in and zoom out features in images using JavaScript</h3>
+   <h4>Press A for zoom in and B for zoom out </h4>
+   <img src = "15.jpg" height = "700px" width = "700px" id = "image"> <br> <br>
+   <script>
+      let image = document.getElementById('image');
+      
+      // add keypress event listener on window
+      window.addEventListener('keypress', (event) =>
+	   {
+      
+         // get the width and height of the image
+         let width = image.clientWidth;
+         let height = image.clientHeight;
+      
+         // when the user presses the 'p' key, zoom in
+         if (event.key == 'A')
+		  {
+            image.style.width = (width + 150) + "px";
+            image.style.height = (height + 150) + "px";
+         }
+      
+         // zoom out when the user presses the q key
+         if (event.key == "B")
+		  {
+            image.style.width = (width - 150) + "px";
+            image.style.height = (height - 150) + "px";
+         }
+      })
+   </script>
+</body>
+</html>

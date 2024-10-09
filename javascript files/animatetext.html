@@ -1,0 +1,75 @@
+<html>
+  
+<head>
+    <title>
+        Curved Box Around Text
+    </title>
+  
+    <style>
+        #text-container {
+            font-size: 100px;
+            text-align: center;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 20px;
+            background-color:#FFFFFF;
+            box-shadow: 0 2px 4px rgba(230, 0, 189, 0.9);
+            transition: color 0.06s linear;
+            position: relative;
+        }
+  
+        #text-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            border: 7px dashed  rgba(0, 0, 245, 0.9);
+        }
+  
+        #text-container span {
+            position: relative;
+            z-index: 2;
+            outline: 9px double rgba(0, 0, 255, 0.8);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+  
+<body>
+    <center>
+        <h1 style="color:green;" >ACEIT</h1>
+  
+        <h3>Text animation </h3>
+          
+        <div id="text-container">
+            <span >Grow With Us</span>
+        </div>
+    </center>
+  
+    <script>
+        const textContainer =
+            document.getElementById("text-container");
+        let hue = 0;
+  
+        const animateText = () =>
+		 {
+            hue = (hue + 1) % 360;
+            const color = `hsl(${hue}, 100%, 50%)`;
+            const shadowColor = `hsla(${hue}, 100%, 50%, 0.9)`;
+            textContainer.style.color = color;
+            textContainer.style.textShadow 
+                = `3px 3px 6px ${shadowColor}`;
+  
+            // Continuously animate the text
+            requestAnimationFrame(animateText);
+        };
+  
+        // Start the animation
+        animateText(); 
+    </script>
+</body>
+  
+</html>

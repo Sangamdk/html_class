@@ -1,0 +1,44 @@
+<html>
+<body>
+<h2>Zoom in and Zoom out</h2>
+<script>
+var zoomfactor=0.03;
+function zoomImage()
+{
+if (parseInt(cache.style.width)>5&&parseInt(cache.style.height)>5)
+{
+cache.style.width=parseInt(cache.style.width)+parseInt(cache.style.width)*zoomfactor*prefix
+
+cache.style.height=parseInt(cache.style.height)+parseInt(cache.style.height)*zoomfactor*prefix
+}
+}
+
+function zoom(originalWidth, originalHeight, img, state)
+{
+cache=eval("document.images."+img)
+prefix=(state=="in")? 1 : -1
+
+if (cache.style.width==""||state=="restore")
+{
+cache.style.width=originalWidth+"px"
+cache.style.height=originalHeight+"px"
+if (state=="restore")
+return
+}
+else{
+zoomImage()
+}
+beginzoom=setInterval("zoomImage()",100)
+}
+
+function stopZoom(){
+if (window.beginzoom)
+clearInterval(beginzoom)
+}
+</script>
+<a href="" onMouseOver="zoom(80,100,'image','in')" onMouseOut="stopZoom()">Zoom In</a>
+
+<a href="" onMouseOver="zoom(100,40,'image','out')" onMouseOut="stopZoom()">Zoom Out</a>
+<p><img name="image" src="22.jpg"></p>
+</body>
+</html>
