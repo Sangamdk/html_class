@@ -1,0 +1,37 @@
+<html>
+<body>
+	<h1>Demo: JavaScript Comparison Operators</h1>
+	
+		var a = 20, b = 125, c = 21, x = 60;
+	
+
+	<p id="p1">a == c returns </p>
+	<p id="p2">a === c returns </p>
+	<p id="p3">b == x returns </p>
+	<p id="p4">b > a returns </p>
+	<p id="p5">a > b returns </p>
+	<p id="p6">x >= c returns </p>
+	<p id="p7">a <= b returns </p>
+	<p id="p8">a != c returns </p>
+	
+	<script>
+		var a = 20, b = 60, c = 21, x = 60;
+
+		document.getElementById("p1").innerHTML += a == c;
+
+		document.getElementById("p2").innerHTML += a === c;
+
+		document.getElementById("p3").innerHTML += b == x;
+	
+
+		document.getElementById("p4").innerHTML += b > a;
+
+		document.getElementById("p5").innerHTML += a > b;
+
+		document.getElementById("p6").innerHTML += x >= c;
+
+		document.getElementById("p7").innerHTML += a <= c;
+		document.getElementById("p8").innerHTML += a != c;
+    </script>
+</body>
+</html>

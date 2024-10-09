@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+input[type=text]
+{border-radius:20%;
+height:50px;
+width:100px;
+border:groove red 3px;
+background-color:blue;
+color:#FFFFFF;
+font-size:20px;}
+
+input[type=button]
+{border:groove green 3px;
+height:50px;
+width:100px;
+background-color:orange;
+color:black;
+font-size:22px;}
+
+#result{background-color:#FF00CC;
+height:200%;
+width:30%;
+color:black;
+font-size:22px;}
+
+</style>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    Enter a number:
+    <input type="text" id="num" /><br /><br />
+    Enter limit:
+    <input type="text" id="limit" /><br /><br />
+    <input type="button" value="Find" onClick="multiply()" />
+    <p id="result"></p>
+    <script>
+        function multiply() 
+		{
+            var n = document.getElementById('num').value;
+            var l = document.getElementById('limit').value;
+            var out = "";
+            for (var i =1; i<=l; i++) 
+			{
+                out = out + n + " * " + i + " = " + n * i + "<br/>";
+            }
+            document.getElementById("result").innerHTML = out;
+        }
+    </script>
+</body>
+</html>

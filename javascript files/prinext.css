@@ -1,0 +1,11 @@
+
+img {
+    width: 350px;
+    height: 350px;
+}
+#previousbtn {
+    margin-right: 75px; /* Add right margin to the previous button */
+}
+#nextbtn {
+    margin-left: 75px; /* Add left margin to the next button */
+}

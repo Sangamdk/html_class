@@ -1,0 +1,56 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<script>
+var displayedOfferImages = [], imageIndex = -1;
+
+function showNextOfferImage() 
+{
+
+    var lookingInDisplayedImages = imageIndex 
+	< (displayedOfferImages.length - 1),
+        offerImage;
+
+    if (lookingInDisplayedImages) {
+        offerImage = nextDisplayedImage();
+    } 
+	else 
+	{
+        offerImage = nextRandomOfferImage();
+        imageIndex = displayedOfferImages.push(offerImage) - 1;
+    }
+
+    changeOfferPicture(offerImage);
+
+}
+
+function showPreviousOfferImage()
+ {
+    var previousImage = previousDisplayedImage();
+
+    if (previousImage) changeOfferPicture(offerImage);
+}
+
+function previousDisplayedImage()
+ {
+    return displayedOfferImages[--imageIndex];
+}
+
+function nextDisplayedImage() 
+{
+    return displayedOfferImages[++imageIndex];
+}
+</script>
+
+<img src="h5.gif" id="box" width="300" height="200">
+<img src="tttt.gif" id="box" width="300" height="200">
+<img src="ww.jpg" id="box" width="300" height="200">
+<img src="yy.jpg" id="box" width="300" height="200">
+<input type="button" value="show image" id="showImge" />
+<input type="button" value="prev" id="prev" />
+<input type="button" value="next" id="next" />
+</body>
+</html>
