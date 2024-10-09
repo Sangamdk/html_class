@@ -1,0 +1,95 @@
+<html>
+<head>
+ <meta charset="utf-8">
+<style>
+
+body {
+  background-color:#fad1ab;
+  padding: 0;
+  margin:10em;
+  text-align:center;
+}
+
+.fa{
+  padding:10px;
+  color:white;
+  border-radius: 10px;
+  margin:5px;
+}
+
+#facebook{
+  padding:10px 17px 10px 20px;
+  color:#3b5998;
+}
+
+#linkedin{
+color:#1c66c2;
+}
+
+#github{
+  color:#000000;
+}
+
+#codepen{
+  color:#cccccc;
+}
+
+#twitter{
+  color:#44ccf6;
+}
+#stack{
+  color:#fe7a15;
+}
+
+
+
+</style>
+
+
+<script>
+
+var enelm = document.getElementById("codepen");
+var faelm = document.getElementById("facebook");
+var twelm = document.getElementById("twitter");
+var gielm = document.getElementById("github");
+var lielm = document.getElementById("linkedin");
+var stelm = document.getElementById("stack");
+
+var opac = 0.1;
+var opacup=true;
+renderLoop();
+
+      function renderLoop() {
+        setTimeout(function() {
+          if(opacup==true)
+             {opac+=0.1;
+              if(opac>=1)opacup=false;
+             }
+         if(opacup==false)
+             {opac-=0.1;
+              if(opac<=0.3) opacup=true;
+             }
+        enelm.style.opacity = opac;
+        faelm.style.opacity = opac;
+        twelm.style.opacity = opac;
+        gielm.style.opacity = opac;
+        lielm.style.opacity = opac;
+        stelm.style.opacity = opac;
+     
+          
+        window.requestAnimationFrame(renderLoop); 
+        },300);
+      }
+</script>
+</head>
+
+<body>
+
+<i id="codepen" class="fa fa-codepen fa-2x"></i>
+<i id="facebook" class="fa fa-facebook fa-2x"></i>
+<i id="twitter" class="fa fa-twitter fa-2x"></i>
+<i id="github" class="fa fa-github fa-2x"></i>
+<i id="linkedin" class="fa fa-linkedin fa-2x"></i>
+<i id="stack" class="fa fa-stack-overflow fa-2x"></i>
+</body>
+</html>

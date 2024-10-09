@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+
+<h2>Floating point arithmetic is not always 100% accurate.</h2>
+<p id="demo1"></p>
+
+<h2>But it helps to multiply and divide:</h2>
+<p id="demo2"></p>
+
+<h2>Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</h2>
+<p id="demo3"></p>
+
+<h2>Extra large or extra small numbers can be written with scientific (exponent) notation:</h2>
+<p id="demo4"></p>
+
+<h2>Numbers can be written with or without decimals:</h2>
+<p id="demo5"></p>
+
+<h2>A common mistake is to expect this result to be </h2>
+<p id="demo6"></p>
+
+
+<script>
+let x = 0.67 + 0.89;
+document.getElementById("demo1").innerHTML = "0.67 + 0.89 = " + x;
+
+let y = (0.13*10 + 0.15*10) / 10;
+document.getElementById("demo2").innerHTML = "0.3 + 0.5 = " + y;
+
+
+let a = 99999999999999;
+let b = 9999999999999999;
+document.getElementById("demo3").innerHTML = a + "<br>" + b;
+
+let i = 123e5;
+let j = 123e-8;
+document.getElementById("demo4").innerHTML = i+ "<br>" + j;
+
+let m = 7.8999;
+let n = 3;
+document.getElementById("demo5").innerHTML = m + "<br>" + n;
+
+
+let r = 4987;
+let s= 678;
+let t =398;
+let result = r + s + t;
+document.getElementById("demo6").innerHTML = result;
+</script>
+
+</body>
+</html>
+
+

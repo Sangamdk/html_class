@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Demo: JavaScript arguments object</h1>
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+	<p id="p4"></p>
+	<script>
+		function Sum(val1, val2) 
+		{
+			return (val1 + val2);
+		}
+
+		document.getElementById("p1").innerHTML = Sum(48,27); 
+		
+
+		function Multiply(val1, val2)
+		 {
+			return( val1 * val2);
+		}
+
+	document.getElementById("p2").innerHTML = Multiply(500,320); 
+	
+		
+		function divided(val1, val2)
+		 {
+			return( val1 / val2);
+		}
+
+	document.getElementById("p3").innerHTML = divided(745,20); 
+	
+	function substract(val1, val2)
+		 {
+			return( val1 - val2);
+		}
+
+	document.getElementById("p4").innerHTML = substract(745,20);
+		
+    </script>
+</body>
+</html>

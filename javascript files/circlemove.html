@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>circle move</title>
+<style>
+@import "compass/css3";
+
+html {
+  background: #0E3741;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  background: #CB4B16;
+  border-radius: 80%;
+  backface-visibility: hidden;
+}
+</style>
+
+</head>
+
+<body>
+<div class="circle"></div>
+
+<script language="javascript">
+var $circle = $('.circle');
+
+function moveCircle(e)
+ {
+  TweenLite.to($circle, 0.4,
+   {
+    css: {
+      left: e.pageX,
+      top: e.pageY
+    }
+  });
+}
+
+$(window).on('onmousemove', moveCircle);
+</script>
+</body>
+</html>

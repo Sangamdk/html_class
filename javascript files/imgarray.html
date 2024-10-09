@@ -1,0 +1,30 @@
+<html>
+ 
+<head>
+    <title>Display Images from Array</title>
+</head>
+ 
+<body>
+    <h1 style="color: green;">IMAGE</h1>
+     
+    <h1>
+        Display Images from Array using Array.map()
+    </h1>
+     
+    <div id="image-container"></div>
+     
+    <script>
+        const images = ['tttt.gif','bb.gif','tt.gif'
+        ];
+ 
+        const container = 
+            document.getElementById('image-container');
+ 
+        const imageTags = 
+            images.map(img => `<img src="${img}">`);
+ 
+        container.innerHTML = imageTags.join('');
+    </script>
+</body>
+ 
+</html>

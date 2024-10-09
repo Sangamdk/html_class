@@ -1,0 +1,70 @@
+<html> 
+  
+<head> 
+    <title>ChartJS Stacked Bar Chart Example</title> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> 
+    </script> 
+    <script src= 
+"https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"> 
+    </script> 
+</head> 
+  
+<body> 
+    <h1 style="color:green;"> 
+        GeeksforGeeks 
+    </h1> 
+      
+    <h3>Chart JS Stacked Chart </h3> 
+      
+    <div> 
+        <canvas id="stackedChartID"></canvas> 
+    </div> 
+  
+  
+    <script> 
+  
+        // Get the drawing context on the canvas 
+        var myContext = document.getElementById( 
+            "stackedChartID").getContext('2d'); 
+        var myChart = new Chart(myContext, { 
+            type: 'bar', 
+            data: { 
+                labels: ["bike", "car", "scooter",  
+                    "truck", "auto", "Bus"], 
+                datasets: [{ 
+                    label: 'worst', 
+                    backgroundColor: "blue", 
+                    data: [17, 16, 4, 11, 8, 9], 
+                }, { 
+                    label: 'Okay', 
+                    backgroundColor: "green", 
+                    data: [14, 2, 10, 6, 12, 16], 
+                }, { 
+                    label: 'bad', 
+                    backgroundColor: "red", 
+                    data: [2, 21, 13, 3, 24, 7], 
+                }], 
+            }, 
+            options: { 
+                plugins: { 
+                    title: { 
+                        display: true, 
+                        text: 'Stacked Bar chart for pollution status' 
+                    }, 
+                }, 
+                scales: { 
+                    x: { 
+                        stacked: true, 
+                    }, 
+                    y: { 
+                        stacked: true 
+                    } 
+                } 
+            } 
+        }); 
+    </script> 
+</body> 
+  
+</html>
+Output:

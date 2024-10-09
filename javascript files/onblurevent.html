@@ -1,0 +1,15 @@
+<html>
+    <head>   
+        <script>
+            function wait()
+            {
+                document.getElementById("result").innerHTML = "Please enter a value...";
+            }
+        </script>      
+    </head>
+    <body>
+        <p>Click in the Input Field and then click outside.</p>
+        <input type="text" onblur="wait()" placeholder="Your Email..." />
+        <div id="result"></div>
+    </body>
+</html>

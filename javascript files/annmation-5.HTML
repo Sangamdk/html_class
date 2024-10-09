@@ -1,0 +1,30 @@
+      <html>  
+   <head>
+      <title>Rollover with a Mouse Events</title>
+      
+      <script type = "text/javascript">
+         <!--
+            if(document.images) 
+			{
+               var image1 = new Image();     // Preload an image
+               image1.src = "LL.gif";
+               
+			   var image2 = new Image();     // Preload second image
+               image2.src = "H5.gif";
+            }
+         //-->
+      </script>
+   </head>
+   
+   <body>
+   
+   <h1>ANIMATION 4</h1>
+      <p>Move your mouse over the image to see the result</p>
+      
+      <a href="Ceric9.gif" onMouseOver = "document.myImage.src = image1.src;"
+	  
+         onMouseOut = "document.myImage.src = image2.src;">
+		 
+         <img name = "myImage" src = "" />WELCOME </a>
+   </body>
+</html>

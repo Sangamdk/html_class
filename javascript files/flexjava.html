@@ -1,0 +1,65 @@
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+  
+        }
+  
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: green;
+            animation-name: gfg;
+            animation-duration: 4s;
+        }
+  
+        h2 {
+            position: relative;
+            margin: 0;
+            font-size: 5em;
+            font-weight: 750;
+            color: white;
+            z-index: 1;
+            overflow: hidden;
+        }
+  
+        h2:before {
+            content: '';
+            position: absolute;
+            right: 130%;
+            width: 130%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent 0%, green 5%, green 100%);
+                  
+            animation: geeksforgeeks 5s linear backwards;
+        }
+  
+        @keyframes geeksforgeeks {
+            from {
+                right: 130%
+            }
+  
+            to {
+                right: -10%;
+            }
+        }
+    </style>
+</head>
+  
+<body>
+    <div>
+        <h2>GeeksforGeeks</h2>
+    </div>
+</body>
+  
+</html>

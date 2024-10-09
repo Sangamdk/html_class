@@ -1,0 +1,26 @@
+<html>  
+<head>  
+<title> setTimeout() method </title>  
+</head>  
+<body>  
+<h1> Hello World :) :) </h1>  
+<h3> This is an example of using the setTimeout() method </h3>  
+<p> Click the following button before 2 seconds to see the effect. </p>  
+<button onclick = "stop()"> Stop </button>  
+<script>  
+var a = setTimeout(fun1, 2000);  
+function fun1()  
+{  
+var win1 = window.open();  
+win1.document.write(" <h2> Welcome to the javaTpoint.com </h2>");  
+setTimeout(function(){win1.close()}, 2000);  
+}  
+function stop()
+ {  
+  clearTimeout(a);  
+}  
+</script>  
+  
+</body>  
+  
+</html>  

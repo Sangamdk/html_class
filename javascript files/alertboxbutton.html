@@ -1,0 +1,55 @@
+<html>
+<head>
+</script>
+<style>
+   #alert {
+      display: none;
+      background-color: gray;
+      border: 4px solid blue;
+      color: white;
+      position: fixed;
+      width: 450px;
+      height: 100px;
+      left: 17%;
+      top: 20%;
+      padding: 6px 8px 8px;
+      text-align: center;
+   }
+
+   #close {
+      border-radius: 12px;
+      height: 2rem;
+      padding: 7px;
+      cursor: pointer;
+      border: 2px solid black;
+      background-color: aqua;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+   }
+</style>
+</head>
+
+<body>
+   <h2> Change button label to alert / confirmation box. </h2>
+   <h4> Creating custom alert box using JavaScript. </h4>
+   
+   <div id = "alert">
+      <p> Welcome to the ACEIT! </p>
+      <button id = "close" onclick = "closepopup()"> Close alert box </button>
+   </div>
+   
+   <button onclick = 'popupAlert();'> Show alert </button>
+   <script>
+      var alertDiv = document.getElementById("alert");
+      function popupAlert()
+	   {
+         alertDiv.style.display = "block";
+      }
+      function closepopup()
+	   {
+         alertDiv.style.display = "none";
+      }
+   </script>
+</body>
+</html>

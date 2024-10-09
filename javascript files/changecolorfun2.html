@@ -1,0 +1,53 @@
+<html>
+ 
+<head>
+    <title>
+        Change Font Color - Method 2
+    </title>
+    <style>
+        body {
+            margin: 5rem;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="gfg" style="border:dotted 4px red;" align="center">
+        <h1>
+            Welcome To ACEITSOLUTION!!
+        </h1>
+    </div>
+    <label for="selectColor">
+        Select a color:
+    </label>
+    <select id="selectColor" onChange="changeColor()">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="#0984e3">Blue</option>
+        <option value="cyan">Cyan</option>
+        <option value="#00b894">Mint Leaf</option>
+        <option value="#e84393">Pink</option>
+    </select>
+    <script>
+        // Provide a function to modify the 
+        // "gfg" element's font color.
+        function changeColor()
+		 {
+            var gfg = document.getElementById("gfg");
+            var selectColor =
+                document.getElementById("selectColor");
+ 
+            // From the drop-down menu, obtain 
+            // the value of the chosen color.
+            var selectedColor =
+            selectColor.options[selectColor.selectedIndex].value;
+ 
+            // Set the font color of the "gfg" 
+            // element to the selected color
+            gfg.style.color = selectedColor;
+        }
+    </script>
+</body>
+ 
+</html>

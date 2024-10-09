@@ -1,0 +1,42 @@
+<html>
+ 
+<head>
+    <title>Change Font Color</title>
+    <style>
+        button {
+            margin-top: 0.5rem;
+            padding: 20px 20px 20px 20px;
+            background:#009933;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            transition: all linear 0.20s;
+            cursor: pointer;
+        }
+ 
+        button:hover {
+            transform: translate(3px, -10px);
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="culor">
+        <h1>
+              Welcome To ACEITSOLUTION!!
+          </h1>
+    </div>
+    <button onClick="changeColor()">
+          Change Color
+      </button>
+   
+    <script>
+        function changeColor()
+		 {
+            var culor = document.getElementById("culor");
+            culor.style.color = "purple";
+        }
+    </script>
+</body>
+ 
+</html>

@@ -1,0 +1,24 @@
+<html> 
+<body> 
+    <center> 
+        <h1>Hello GFG</h1> 
+        <div id="imgDiv"></div> 
+    </center> 
+  
+    <script> 
+        var Pic = "" 
+          
+        function displayImage(pic) { 
+            let divLocation = document.getElementById("imgDiv"); 
+            let imgElement = document.createElement("img"); 
+            imgElement.src = pic 
+            divLocation.append(imgElement); 
+        } 
+          
+        Pic = 
+"https://media.geeksforgeeks.org/gfg-gg-logo.svg"  
+          
+        displayImage(Pic); 
+    </script> 
+</body> 
+</html>

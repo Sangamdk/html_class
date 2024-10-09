@@ -1,0 +1,65 @@
+<html> 
+  
+<head> 
+    <title>ChartJS Stacked Bar Chart Example</title> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> 
+    </script> 
+    <script src= 
+"https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"> 
+    </script> 
+</head> 
+  
+<body> 
+    <div id="containerID"> 
+        <h1 style="color:green;"> 
+            GeeksforGeeks 
+        </h1> 
+          
+        <h3>Chart JS Stacked Chart </h3> 
+          
+        <div> 
+            <canvas id="stackedChartID"></canvas> 
+        </div> 
+    </div> 
+  
+    <script> 
+        // Get the drawing context on the canvas 
+        var myContext = document.getElementById( 
+            "stackedChartID").getContext('2d'); 
+              
+        var myChart = new Chart(myContext, { 
+            type: 'bar', 
+            data: { 
+                labels: ["bike", "car", "scooter", "truck"], 
+                datasets: [{ 
+                    label: 'worst', 
+                    backgroundColor: "blue", 
+                    data: [17, 16, 4, 1], 
+                }, { 
+                    label: 'Okay', 
+                    backgroundColor: "green", 
+                    data: [4, 2, 10, 6], 
+                }, { 
+                    label: 'bad', 
+                    backgroundColor: "red", 
+                    data: [2, 21, 3, 24], 
+                }], 
+            }, 
+            options: { 
+                indexAxis: 'y', 
+                scales: { 
+                    x: { 
+                        stacked: true, 
+                    }, 
+                    y: { 
+                        stacked: true 
+                    } 
+                }, 
+                responsive: true 
+            } 
+        }); 
+    </script> 
+</body> 
+  
+</html>
