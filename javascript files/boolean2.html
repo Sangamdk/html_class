@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Demo: JavaScript Boolean</h1>
+	<p id="p1">80 > 50 = </p>
+	<p id="p2">a < b = </p>
+	<p id="p3">a > b = </p>
+	<p id="p4">a + 80 > b + 50 = </p>
+	<script>
+		var a = 80, b = 50;
+
+		var result = 80 > 50; 
+		document.getElementById("p1").textContent += result;
+
+		result = a >= b; 
+		document.getElementById("p2").textContent += result;
+
+		result = a > b; 
+		document.getElementById("p3").textContent += result;
+
+		result = a + 80 < b + 50; 
+		document.getElementById("p4").textContent += result;
+	</script>
+</body>
+</html>

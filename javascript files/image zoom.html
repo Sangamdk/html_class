@@ -1,0 +1,17 @@
+<html>
+<body>
+   <h3>Allowing users to set custom <i> height and width property </i> of images to add zoom in and zoom out features in images using JavaScript</h3>
+   <img src ="h5.gif" height = "300px" width = "300px"  id = "image"> <br> <br>
+   <button onClick = "ZoomInOROut()"> Zoom IN or Out </button>
+   <script> 
+      let image = document.getElementById('image');
+      function ZoomInOROut() 
+	  {
+         let width = prompt("Enter the new width of the image ", );
+         let height = prompt("Enter the new height of the image", );
+         image.style.width = width + "px";
+         image.style.height = height + "px";
+      }
+   </script>
+</body>
+</html> 

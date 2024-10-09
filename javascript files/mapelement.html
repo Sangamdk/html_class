@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="su.jpg" width="145" height="126" usemap="#planetmap">
+
+<map id="myMap" name="planetmap">
+</map>
+
+<p>Click the button to create an AREA element with a link to "venus.htm".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.createElement("AREA");
+  x.setAttribute("href", "venus.htm");
+  x.setAttribute("shape", "circle");
+  x.setAttribute("coords", "124,58,8");
+  document.getElementById("myMap").appendChild(x);
+
+  document.getElementById("demo").innerHTML = "The AREA element was created, and you can now click on the venus area in the image.";
+}
+</script>
+
+</body>
+</html>
